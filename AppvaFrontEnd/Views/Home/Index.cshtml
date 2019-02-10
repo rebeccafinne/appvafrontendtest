@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<script src="wwwroot/js/site.js" language="javascript" type="text/javascript"></script>
 
 <h2>
     Hi
@@ -8,12 +9,23 @@
 <h3>
     Welcome to Appva Front end test. Good luck!
 </h3>
+<h2>Timepicker</h2> <h3>Pick a date and see how many days there is left.</h3>
 
-<h2>Timepicker</h2>
-<p>Enter a date</p>
-<div class="form-controls">
-    <label for="id5c60199e2eeb1">YYYYMMDD</label>
-    <input type="date" name="datePick" required="required" />
+<div class="form-controls form-controls_error">
+    <label for="id5c604ae70d0f1">Enter a date</label>
+    <input type="date" id="id5c604ae70d0f1" name="id5c604ae70d0f1" aria-invalid="false" aria-describedby="form-controls__error-message-id5c604ae70d176" />
+    <div class="form-controls__error-message" id="form-controls__error-message-id5c604ae70d176" ">Det är genom att fela man verkligen lär sig</div>
+</div> 
+<button type="button" id="datePickButton" onclick="displayDaysLeft()">Pick date</button>
+
+
+
+<div class="card" id="daysContainer">
+
+    <h4 id="datePassed" style="font-weight:700;"></h4>
+    <h3 id="daysLeft" style="font-weight:800; text-transform:uppercase; letter-spacing:0.01em"></h3>
+    <h4 id="dateComing" style="font-weight:700;"></h4>
+
+
+
 </div>
-
-

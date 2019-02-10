@@ -35,3 +35,18 @@ body {
         display: none;
     }
 }
+
+#form-controls__error-message-id5c604ae70d176{
+    display: none;
+}
+
+
+
+#datePickButton{
+    margin-top: 20px;
+}
+
+#daysContainer{
+    display: none;
+    text-align: center;
+}
