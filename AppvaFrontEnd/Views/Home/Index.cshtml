@@ -5,16 +5,18 @@
 
 
 <h2 class="heading">Timepicker</h2> <h3 class="section--vspace heading">Pick a date and see how many days there is left.</h3>
-    <div class="inputArea" style="width:50%;">
-        <div class="form-controls form-controls_error">
-            <label for="id5c604ae70d0f1">Enter a date in format YYYY-MM-DD</label>
-            <input type="date" id="id5c604ae70d0f1" name="id5c604ae70d0f1" aria-invalid="false" aria-describedby="form-controls__error-message-id5c604ae70d176" />
-            <div class="form-controls__error-message" id="form-controls__error-message-id5c604ae70d176" "></div>
-        </div>
-        <button class="section--hspace" type="button" id="datePickButton" onclick="displayDaysLeft()">Pick date</button>
-
-
+<div class="inputArea">
+    <div class="form-controls form-controls_error">
+        <label for="id5c604ae70d0f1">Enter a date in format YYYY-MM-DD</label>
+        <input type="date" id="id5c604ae70d0f1" name="id5c604ae70d0f1" aria-invalid="false" aria-describedby="form-controls__error-message-id5c604ae70d176" />
+        <div class="form-controls__error-message" id="form-controls__error-message-id5c604ae70d176" "></div>
     </div>
+
+    <!--Button could be removed if event on change is working in all browsers-->
+    <button class="section--hspace" type="button" id="datePickButton" onclick="displayDaysLeft()">Pick date</button>
+
+
+</div>
 
 
 

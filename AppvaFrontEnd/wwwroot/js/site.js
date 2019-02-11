@@ -5,14 +5,14 @@
 
 var input = document.getElementsByTagName('input')[0];
 
-//If type="date" does not exist in web browser
+//If type="date" for input field does not exist in web browser
 $(document).ready(function() {
     if ( $('[type="date"]').prop('type') != 'date' ) {
         $('[type="date"]').datepicker();
     }
 });
 
-
+//Events appear not to be working in Safari, but works in Chrome
 input.addEventListener('input', function (evt) {
     displayDaysLeft();
 });
@@ -59,6 +59,8 @@ function checkValidity(chosenDate){
          if(daysLeft <= 0){
              document.getElementById("form-controls__error-message-id5c604ae70d176").style.display = "block";
              document.getElementById("form-controls__error-message-id5c604ae70d176").innerHTML = "Date already passed"
+             document.getElementById("daysContainer").style.display = "none";
+
 
          }else{
              document.getElementById("daysContainer").style.display = "block";

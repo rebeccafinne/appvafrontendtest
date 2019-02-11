@@ -40,9 +40,9 @@ body {
     display: none;
 }
 
-.heading{
+/*.heading{
     text-align: center;
-}
+}*/
 
 
 #datePickButton {
@@ -59,7 +59,9 @@ body {
 }
 
 
-
+/*Trying to get input field and button more in center but not successful, then also have the heading centered (see out 
+    commented code above.
+*/
 .inputArea {
     display: grid;
     max-width: 480px;
