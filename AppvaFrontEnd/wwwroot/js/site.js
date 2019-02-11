@@ -3,9 +3,24 @@
 
 // Write your JavaScript code.
 
+var input = document.getElementsByTagName('input')[0];
+
+
+$(document).ready(function() {
+    if ( $('[type="date"]').prop('type') != 'date' ) {
+        $('[type="date"]').datepicker();
+    }
+});
+
+
+input.addEventListener('keyup',function(e){
+    if (e.keyCode === 13) {
+        displayDaysLeft();
+  }
+});
+
 function displayDaysLeft() {
     var date = document.getElementById("id5c604ae70d0f1").value;
-    console.log(date);
     var splitDate = date.split("-");
 
 
@@ -27,16 +42,13 @@ function checkValidity(date){
 
     if(chosenDate instanceof Date && !isNaN(chosenDate)){
          var daysLeft = howManyDaysLeft(chosenDate);
-         document.getElementById("daysContainer").style.display = "block";
          //Has the date passed or not
          if(daysLeft <= 0){
-             document.getElementById("datePassed").innerHTML = year + "-" + month
-                    + "-" + day + " passed ";
-             document.getElementById("daysLeft").innerHTML =  Math.abs(daysLeft);
-             document.getElementById("dateComing").innerHTML = " days ago";
-             document.getElementById("form-controls__error-message-id5c604ae70d176").style.display = "none";
+             document.getElementById("form-controls__error-message-id5c604ae70d176").style.display = "block";
+             document.getElementById("form-controls__error-message-id5c604ae70d176").innerHTML = "Date already passed"
 
          }else{
+             document.getElementById("daysContainer").style.display = "block";
 
              document.getElementById("daysLeft").innerHTML = daysLeft
              document.getElementById("dateComing").innerHTML =  " days left to the " + year + 
@@ -49,6 +61,7 @@ function checkValidity(date){
         //Appears to not be doing anything, need style.display = "block" to work.
         document.getElementById("id5c604ae70d0f1").setAttribute("aria-invalid", "true");
         document.getElementById("form-controls__error-message-id5c604ae70d176").style.display = "block";
+        document.getElementById("form-controls__error-message-id5c604ae70d176").innerHTML = "This is not a valid date, please pick another date";
 
         
     } 

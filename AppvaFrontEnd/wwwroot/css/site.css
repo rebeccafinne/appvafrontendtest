@@ -42,11 +42,50 @@ body {
 
 
 
-#datePickButton{
-    margin-top: 20px;
+#datePickButton {
+    margin-top: 23px;
+    float: right;
+    margin-right: 65%;
+    border-radius: 4px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    justify-content: center;
+    background-color: #67ad3d;
+    border: none;
+    color: white;
 }
 
-#daysContainer{
+
+
+.inputArea{
+    justify-content:center;
+}
+
+
+
+
+#daysContainer {
     display: none;
     text-align: center;
+    margin-top: 30px;
 }
+
+.clearFix{
+    clear: both;
+}
+
+.form-controls{
+    float: left;
+    justify-content: center;
+}
+
+#daysLeft {
+    color: #eceff4;
+}
+
+#dateComing {
+    color: #eceff4;
+}
+
+
+
