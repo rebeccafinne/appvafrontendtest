@@ -5,11 +5,16 @@
 
 var input = document.getElementsByTagName('input')[0];
 
-
+//If type="date" does not exist in web browser
 $(document).ready(function() {
     if ( $('[type="date"]').prop('type') != 'date' ) {
         $('[type="date"]').datepicker();
     }
+});
+
+
+input.addEventListener('input', function (evt) {
+    displayDaysLeft();
 });
 
 
@@ -19,26 +24,34 @@ input.addEventListener('keyup',function(e){
   }
 });
 
+//Make the input as a array with year, month and day
 function displayDaysLeft() {
     var date = document.getElementById("id5c604ae70d0f1").value;
     var splitDate = date.split("-");
 
+    //Make split date to the JS type Date
+    var chosenDate = new Date(splitDate[0], splitDate[1]-1, splitDate[2])
 
-   checkValidity(splitDate);
+
+
+   checkValidity(chosenDate);
 
 
      }
 
-function checkValidity(date){
-    var chosenDate = new Date(date[0], date[1]-1, date[2])
+function checkValidity(chosenDate){
+    //Make strings for output
     var day = chosenDate.getDay();
     var month = chosenDate.getMonth() + 1;
     var year = chosenDate.getFullYear();
+
+    
     if(month < 10){
         month = '0' + month;
     }if(day < 10){
         day = '0' + day
     }
+
 
     if(chosenDate instanceof Date && !isNaN(chosenDate)){
          var daysLeft = howManyDaysLeft(chosenDate);

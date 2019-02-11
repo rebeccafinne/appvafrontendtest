@@ -40,16 +40,19 @@ body {
     display: none;
 }
 
+.heading{
+    text-align: center;
+}
 
 
 #datePickButton {
-    margin-top: 23px;
-    float: right;
-    margin-right: 65%;
+    margin-top: 24px;
+    margin-bottom: 24px;
     border-radius: 4px;
     padding-bottom: 7px;
     padding-top: 7px;
     justify-content: center;
+    text-align: center;
     background-color: #67ad3d;
     border: none;
     color: white;
@@ -57,11 +60,18 @@ body {
 
 
 
-.inputArea{
-    justify-content:center;
+.inputArea {
+    display: grid;
+    max-width: 480px;
+    grid-template-columns: 1fr 0.5fr;
+    grid-gap: 30px;
+    justify-content: center;
+    align-items: center;
 }
 
-
+.form-controls {
+    justify-content: center;
+}
 
 
 #daysContainer {
@@ -70,14 +80,8 @@ body {
     margin-top: 30px;
 }
 
-.clearFix{
-    clear: both;
-}
 
-.form-controls{
-    float: left;
-    justify-content: center;
-}
+
 
 #daysLeft {
     color: #eceff4;
